@@ -1,6 +1,6 @@
 {
   "name": "generator-ts-api",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "homepage": "",
   "author": {
@@ -77,6 +77,6 @@
       "prettier"
     ]
   },
-  "repository": "programadriano/generator-ts-api",
+  "repository": "https://github.com/programadriano/ts-api-generator",
   "license": "MIT"
 }

@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "compile": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./dist/server.js && tsc -w"
+    "start": "nodemon ./dist/server.js"
   },
   "keywords": [],
   "author": "",

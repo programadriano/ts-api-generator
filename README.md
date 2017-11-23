@@ -16,12 +16,17 @@ Then generate your new project:
 yo ts-api
 ```
 
-## Getting To Know Yeoman
+## This project was configured with:
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+ * JTW.
+ * Mongodb.
+ * Express.
+
+ ## To run
+
+ * After install you'll need to execute de follow steps below:
+ * npm run compile (to generate your dist)
+ * npm start (to execute your project) this command will open your project in localhost:3040
 
 ## License
 
