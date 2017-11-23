@@ -1,6 +1,9 @@
 # generator-ts-api [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > 
 
+## Description
+This project is a Scaffolding to create a new Project  Node.js with TypeScript and MongoDB. We create a simples Auth with JWT to help someone with this simple step.
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-ts-api using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
