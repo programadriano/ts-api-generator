@@ -1,7 +1,7 @@
 {
   "name": "generator-ts-api",
-  "version": "0.2.0",
-  "description": "",
+  "version": "0.3.0",
+  "description": "This project is a Scaffolding to create a new Project Node.js with TypeScript and MongoDB. We create a simples Auth with JWT to help someone with this simple step",
   "homepage": "",
   "author": {
     "name": "Thiago Adriano",
@@ -13,8 +13,10 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
-    "yeoman-generator"
+    "generator",
+    "api",
+    "typescript",
+    "nodejs"
   ],
   "devDependencies": {
     "yeoman-test": "^1.7.0",

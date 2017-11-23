@@ -2,7 +2,7 @@
 > 
 
 ## Description
-This project is a Scaffolding to create a new Project  Node.js with TypeScript and MongoDB. We create a simples Auth with JWT to help someone with this simple step.
+This project is a Scaffolding to create a new Project  Node.js with TypeScript and MongoDB. We created a simples Auth with JWT to help someone with this simple step.
 
 ## Installation
 
