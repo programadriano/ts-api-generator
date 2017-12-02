@@ -4,7 +4,9 @@ import * as bodyParser from "body-parser";
 import DataBase from './config/db';
 import * as cors from "cors";
 
-import Auth from './config/auth';
+<% if(chooseJWT == "yes") { %>
+ import Auth from './config/auth';
+ <%}%>
 
 //Route
 import UserRoute from './routes/userRoute';
@@ -55,8 +57,9 @@ class App {
       res.send({ 'result': 'version 0.0.2' })
     });
 
+    <% if(chooseJWT == "yes") { %>
     this.app.use(Auth.validate);
-
+     <% } %>
     this.app.route("/api/v1/users").get(UserRoute.getAll);
 
 

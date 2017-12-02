@@ -22,6 +22,12 @@ module.exports = class extends Generator {
         name: 'versonES',
         message: 'What is your EcmaScript version?',
         choices: ['es5', 'es6']
+      },
+      {
+        type: 'list',
+        name: 'chooseJWT',
+        message: 'Would you like to use JWT?',
+        choices: ['yes', 'no']
       }
       /* ,{
         type: "list",
@@ -29,12 +35,7 @@ module.exports = class extends Generator {
         message: "What is your DB?",
         choices: ["mongoDB", "postgre"]
       },
-      {
-        type: "list",
-        name: "chooseDB",
-        message: "Would you like to use JWT?",
-        choices: ["yes", "no"]
-      } */
+       */
     ];
 
     return this.prompt(prompts).then(props => {
@@ -42,7 +43,7 @@ module.exports = class extends Generator {
       this.props = props;
       this.log(props.name);
       this.log(props.versonES);
-      //  This.log(props.chooseDB);
+      this.log(props.chooseJWT);
     });
   }
 
@@ -107,9 +108,12 @@ module.exports = class extends Generator {
 
     /* End Folders */
 
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('_server/app.ts'),
-      this.destinationPath('server/app.ts')
+      this.destinationPath('server/app.ts'),
+      {
+        chooseJWT: this.props.chooseJWT
+      }
     );
 
     this.fs.copy(

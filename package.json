@@ -1,23 +1,17 @@
 {
   "name": "generator-ts-api",
-  "version": "0.3.0",
-  "description": "This project is a Scaffolding to create a new Project Node.js with TypeScript and MongoDB. We create a simples Auth with JWT to help someone with this simple step",
+  "version": "0.4.0",
+  "description":
+    "This project is a Scaffolding to create a new Project Node.js with TypeScript and MongoDB. We create a simples Auth with JWT to help someone with this simple step",
   "homepage": "",
   "author": {
     "name": "Thiago Adriano",
     "email": "tadriano.net@gmail.com",
     "url": ""
   },
-  "files": [
-    "generators"
-  ],
+  "files": ["generators"],
   "main": "generators/index.js",
-  "keywords": [
-    "generator",
-    "api",
-    "typescript",
-    "nodejs"
-  ],
+  "keywords": ["generator", "api", "typescript", "nodejs"],
   "devDependencies": {
     "yeoman-test": "^1.7.0",
     "yeoman-assert": "^3.1.0",
@@ -48,20 +42,11 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   },
   "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
+    "extends": ["xo", "prettier"],
     "env": {
       "jest": true,
       "node": true
@@ -75,9 +60,7 @@
         }
       ]
     },
-    "plugins": [
-      "prettier"
-    ]
+    "plugins": ["prettier"]
   },
   "repository": "https://github.com/programadriano/ts-api-generator",
   "license": "MIT"
