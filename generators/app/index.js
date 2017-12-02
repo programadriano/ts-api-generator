@@ -4,41 +4,63 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 
 module.exports = class extends Generator {
-
-
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the first-rate ' + chalk.red('generator-ts-api') + ' generator!'
-    ));
+    this.log(
+      yosay('Welcome to the first-rate ' + chalk.red('generator-ts-api') + ' generator!')
+    );
 
-    const prompts = [{
-      type: 'input',
-      name: 'name',
-      message: 'Your project name:',
-      default: this.appname
-    }];
+    const prompts = [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Your project name:',
+        default: this.appname
+      },
+      {
+        type: 'list',
+        name: 'versonES',
+        message: 'What is your EcmaScript version?',
+        choices: ['es5', 'es6']
+      }
+      /* ,{
+        type: "list",
+        name: "chooseDB",
+        message: "What is your DB?",
+        choices: ["mongoDB", "postgre"]
+      },
+      {
+        type: "list",
+        name: "chooseDB",
+        message: "Would you like to use JWT?",
+        choices: ["yes", "no"]
+      } */
+    ];
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       this.props = props;
       this.log(props.name);
+      this.log(props.versonES);
+      //  This.log(props.chooseDB);
     });
   }
 
   writing() {
-    /* Config */
-
     this.fs.copyTpl(
       this.templatePath('_package.json'),
-      this.destinationPath('package.json'), {
+      this.destinationPath('package.json'),
+      {
         name: this.props.name
       }
     );
 
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('_tsconfig.json'),
-      this.destinationPath('tsconfig.json')
+      this.destinationPath('tsconfig.json'),
+      {
+        versonES: this.props.versonES
+      }
     );
 
     /* End Config */
