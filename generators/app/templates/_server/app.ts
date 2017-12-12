@@ -3,7 +3,7 @@ import * as morgan from "morgan";
 import * as bodyParser from "body-parser";
 import DataBase from './config/db';
 import * as cors from "cors";
-import uploads from "./config/upload";
+import uploads from "./config/uploads";
 
 <% if(chooseJWT == "yes") { %>
  import Auth from './config/auth';
