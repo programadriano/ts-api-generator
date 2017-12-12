@@ -87,6 +87,7 @@ module.exports = class extends Generator {
       this.templatePath('_server/config/uploads.ts'),
       this.destinationPath('server/config/uploads.ts')
     );
+
     /* End ConfigAll */
 
     /* Folders */

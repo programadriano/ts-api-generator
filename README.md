@@ -24,6 +24,7 @@ yo ts-api
  * JTW.
  * Mongodb.
  * Express.
+ * Multer. 
 
  ## To run
 
