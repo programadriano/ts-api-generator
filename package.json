@@ -1,9 +1,9 @@
 {
   "name": "generator-ts-api",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description":
     "This project is a Scaffolding to create a new Project Node.js with TypeScript and MongoDB. We create a simples Auth with JWT to help someone with this simple step",
-  "homepage": "",
+  "homepage": "omundoedos.net",
   "author": {
     "name": "Thiago Adriano",
     "email": "tadriano.net@gmail.com",

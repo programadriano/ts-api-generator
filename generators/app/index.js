@@ -98,18 +98,13 @@ module.exports = class extends Generator {
     );
 
     this.fs.copy(
-      this.templatePath('_server/models/userSchema.ts'),
-      this.destinationPath('server/models/userSchema.ts')
+      this.templatePath('_server/schemas/userSchema.ts'),
+      this.destinationPath('server/schemas/userSchema.ts')
     );
 
     this.fs.copy(
       this.templatePath('_server/repositories/userRepository.ts'),
       this.destinationPath('server/repositories/userRepository.ts')
-    );
-
-    this.fs.copy(
-      this.templatePath('_server/routes/userRoute.ts'),
-      this.destinationPath('server/routes/userRoute.ts')
     );
 
     /* End Folders */

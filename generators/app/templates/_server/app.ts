@@ -10,7 +10,8 @@ import uploads from "./config/uploads";
  <%}%>
 
 //Route
-import UserRoute from './routes/userRoute';
+import UserController from './controllers/userController';
+
 class App {
   public app: express.Application;
   private morgan: morgan.Morgan;
@@ -61,7 +62,7 @@ class App {
     <% if(chooseJWT == "yes") { %>
     this.app.use(Auth.validate);
      <% } %>
-    this.app.route("/api/v1/users").get(UserRoute.getAll);
+    this.app.route("/api/v1/users").get(UserController.getAll);
 
 
   }
